@@ -1,0 +1,9 @@
+# List all python libraries for the lambda
+itsdangerous==2.0.1
+Flask==1.1.2
+numpy==1.21.5
+Pillow==9.0.1
+werkzeug==2.0.3
+Jinja2==2.10.1
+MarkupSafe==1.1.1
+tensorflow --no-cache-dir
