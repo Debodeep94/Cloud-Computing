@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style >    
+        body
+        {
+        font-weight:bold;
+        font-family:Copperplate, Papyrus, fantasy;
+        letter-spacing:4px;
+        text-decoration:none;
+        color: aliceblue;
+        background-image: url({{url_for('static',filename='sparkle.png')}})
+      }
+    </style>
+  
+  </head>  
+<body>
+
+
+<div class="container">
+  <center>
+  <h1 class="jumbotron bg-primary" style="color:aliceblue;" style="font-weight: bold;">Forest Fire Classification</h1>
+  <br><br>
+  <form class="form-horizontal" action="/submit" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+      <label class="control-label col-sm-2" for="pwd">Upload Your Image</label>
+      <div class="col-sm-10">          
+        <input type="file" class="form-control" placeholder="Hours Studied"  name="my_image" id="pwd">
+      </div>
+    </div>
+
+    <div class="form-group">        
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+
+	{% if prediction %}
+  <img src="{{img_path}}" height="375px" width="375px">
+  <h2 style="color:aliceblue;"> The predicted class is   : <i> {{image_class}} </i></h2>
+	
+	{% endif %}
+</center>
+</div>
+
+</body>
+</html>
