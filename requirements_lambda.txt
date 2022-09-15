@@ -1,0 +1,3 @@
+# List all python libraries for the lambda
+tensorflow
+tensorflow_hub
